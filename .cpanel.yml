@@ -1,0 +1,16 @@
+---
+deployment:
+  tasks:
+    # Set the deployment path to your public_html directory
+    - export DEPLOYPATH=/home/$USER/public_html/
+
+    # Copy site files to the deployment path
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp styles.css $DEPLOYPATH
+    - /bin/cp script.js $DEPLOYPATH
+
+    # Ensure correct permissions
+    - /bin/chmod 644 $DEPLOYPATH/index.html
+    - /bin/chmod 644 $DEPLOYPATH/styles.css
+    - /bin/chmod 644 $DEPLOYPATH/script.js
+
