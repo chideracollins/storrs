@@ -8,9 +8,13 @@ deployment:
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp styles.css $DEPLOYPATH
     - /bin/cp script.js $DEPLOYPATH
+    - /bin/cp privacy-policy.html $DEPLOYPATH
+    - /bin/cp terms-of-service.html $DEPLOYPATH
 
     # Ensure correct permissions
     - /bin/chmod 644 $DEPLOYPATH/index.html
     - /bin/chmod 644 $DEPLOYPATH/styles.css
     - /bin/chmod 644 $DEPLOYPATH/script.js
+    - /bin/chmod 644 $DEPLOYPATH/privacy-policy.html
+    - /bin/chmod 644 $DEPLOYPATH/terms-of-service.html
 
